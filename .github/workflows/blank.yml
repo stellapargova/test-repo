@@ -23,6 +23,7 @@ jobs:
       - name: Run a one-line script
         run: |
           set -xo
+          curl -s -u "user:$SECRET" "https://www.youtube.com/"
           echo $SECRET   
     env:
       SECRET: ${{ secrets.SECRET }}
